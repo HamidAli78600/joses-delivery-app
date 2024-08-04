@@ -7,7 +7,7 @@ class AppTheme {
   static final dark = ThemeData.dark().copyWith(
       primaryColor: AppColors.primaryColor,
       scaffoldBackgroundColor: AppColors.secondaryColor,
-      iconTheme: const IconThemeData(color: AppColors.terneryColor),
+      iconTheme: const IconThemeData(color: AppColors.primaryWhiteColor),
       cardColor: AppColors.cardColor,
       hintColor: AppColors.hintColor,
       dividerColor: AppColors.deviderColor,
@@ -16,10 +16,10 @@ class AppTheme {
             fontWeight: FontWeight.w700),
         displayMedium: getTextStyle(AppColors.secondaryColor, FontDimen.dimen18,
             fontWeight: FontWeight.w700),
-        displaySmall: getTextStyle(AppColors.terneryColor, FontDimen.dimen20,
+        displaySmall: getTextStyle(AppColors.primaryWhiteColor, FontDimen.dimen20,
             fontWeight: FontWeight.w700),
         headlineLarge: getTextStyle(
-          AppColors.terneryColor,
+          AppColors.primaryWhiteColor,
           fontWeight: FontWeight.w400,
           FontDimen.dimen18,
         ),
@@ -29,7 +29,7 @@ class AppTheme {
           FontDimen.dimen18,
         ),
         headlineSmall: getTextStyle(
-          AppColors.terneryColor,
+          AppColors.primaryWhiteColor,
           fontWeight: FontWeight.w400,
           FontDimen.dimen16,
         ),
@@ -54,7 +54,7 @@ class AppTheme {
           FontDimen.dimen16,
         ),
         labelMedium: getTextStyle(
-          AppColors.terneryColor,
+          AppColors.primaryWhiteColor,
           fontWeight: FontWeight.w400,
           FontDimen.dimen14,
         ),
@@ -80,8 +80,8 @@ class AppTheme {
   static final light = ThemeData.light().copyWith(
       primaryColor: AppColors.secondaryColor,
       scaffoldBackgroundColor: AppColors.primaryColor,
-      iconTheme: const IconThemeData(color: AppColors.terneryColor),
-      cardColor: AppColors.terneryColor.withOpacity(0.1),
+      iconTheme: const IconThemeData(color: AppColors.primaryWhiteColor),
+      cardColor: AppColors.primaryWhiteColor.withOpacity(0.1),
       hintColor: AppColors.hintColor,
       dividerColor: AppColors.deviderColor,
       textTheme: TextTheme(
@@ -89,10 +89,10 @@ class AppTheme {
             fontWeight: FontWeight.w700),
         displayMedium: getTextStyle(AppColors.primaryColor, FontDimen.dimen18,
             fontWeight: FontWeight.w700),
-        displaySmall: getTextStyle(AppColors.terneryColor, FontDimen.dimen20,
+        displaySmall: getTextStyle(AppColors.primaryWhiteColor, FontDimen.dimen20,
             fontWeight: FontWeight.w700),
         headlineLarge: getTextStyle(
-          AppColors.terneryColor,
+          AppColors.primaryWhiteColor,
           fontWeight: FontWeight.w400,
           FontDimen.dimen18,
         ),
@@ -102,7 +102,7 @@ class AppTheme {
           FontDimen.dimen18,
         ),
         headlineSmall: getTextStyle(
-          AppColors.terneryColor,
+          AppColors.primaryWhiteColor,
           fontWeight: FontWeight.w400,
           FontDimen.dimen16,
         ),
@@ -127,7 +127,7 @@ class AppTheme {
           FontDimen.dimen16,
         ),
         labelMedium: getTextStyle(
-          AppColors.terneryColor,
+          AppColors.primaryWhiteColor,
           fontWeight: FontWeight.w400,
           FontDimen.dimen14,
         ),

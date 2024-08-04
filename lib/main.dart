@@ -1,6 +1,7 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:joses_delivery_app/services/DependencyInjection.dart';
+import 'package:joses_delivery_app/services/dependency_injection.dart';
 import 'dart:io';
 import 'package:joses_delivery_app/utils/app_dimen.dart';
 import 'package:joses_delivery_app/utils/app_strings.dart';
@@ -10,7 +11,9 @@ import 'package:joses_delivery_app/view/auth_screens/splash_screen.dart';
 
 void main() {
   DependencyInjection.init();
-  runApp(const MyApp());
+  runApp(DevicePreview(builder: (BuildContext context)=> const MyApp()));
+
+  // runApp(const MyApp());
 }
 
 
@@ -40,7 +43,7 @@ class MyApp extends StatelessWidget {
           ),
         );
       },
-      home: const SplashScreen(),
+      home: SplashScreen(),
     );
   }
 }

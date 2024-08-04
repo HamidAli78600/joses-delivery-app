@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/a2z/Documents/GitHub/joses_delivery_app/android/app/src/main/res/values/styles.xml",
+                    "source": "/Users/a2z/Documents/GitHub/joses-delivery-app/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",
