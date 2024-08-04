@@ -3,10 +3,10 @@ import 'package:joses_delivery_app/utils/constants.dart';
 
 class StorageHelper {
   static const String _accessToken = 'userAccessToken';
-  static const String _userVisit = 'userVisit';
+  static const String _userRole = 'userRole';
   static const String _deviceID = 'deviceID';
 
-  // setter
+  // login token
   static setLoginToken(String token) {
     kStorage.write(_accessToken, token);
   }
@@ -19,14 +19,16 @@ class StorageHelper {
     return kStorage.remove(_accessToken);
   }
 
-  static setUserVisitValue(bool value) {
-    kStorage.write(_userVisit, value);
+  // user role
+  static setUserRole(String value) {
+    kStorage.write(_userRole, value);
   }
 
-  static _getUserVisitValue() {
-    return kStorage.read(_userVisit) ?? false;
+  static _getUserRoleValue() {
+    return kStorage.read(_userRole) ?? 'none';
   }
 
+  // device id
   static setDeviceID(String deviceID) {
     kStorage.write(_deviceID, deviceID);
   }
@@ -38,7 +40,8 @@ class StorageHelper {
   // getter
   static String get userAccessToken => _getLoginToken();
   static String get deviceID => _getDeviceID();
-  static bool get isUserVisit => _getUserVisitValue();
+  static String get userRole => _getUserRoleValue();
+
 
   set isDarkMode(bool value) => kStorage.write("isDark", value);
   bool? get isDark => kStorage.read('isDark');

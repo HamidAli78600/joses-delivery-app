@@ -5,6 +5,9 @@ import 'package:joses_delivery_app/utils/app_dimen.dart';
 import 'package:joses_delivery_app/utils/app_strings.dart';
 import 'package:joses_delivery_app/utils/constants.dart';
 import 'package:joses_delivery_app/utils/icons_and_images_path.dart';
+import 'package:joses_delivery_app/utils/storage_helper.dart';
+import 'package:joses_delivery_app/view/auth_screens/welcome_screen.dart';
+import 'package:joses_delivery_app/widgets/app_buttons/k_primary_button.dart';
 
 class ChooseUserTypeScreen extends StatelessWidget {
    ChooseUserTypeScreen({super.key});
@@ -87,41 +90,32 @@ class ChooseUserTypeScreen extends StatelessWidget {
                         fontFamily: AppFonts.sfpRoundedBold,
                         color: AppColors.primaryWhiteColor,
                         fontSize: FontDimen.dimen28,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w800,
                         letterSpacing: 0.2
                       ),
                     ),
                     Column(
                       children: [
-                        Container(
-                          height: mQ.height * 0.07,
-                          width: mQ.width,
-                          decoration: BoxDecoration(
-                            color: AppColors.primaryWhiteColor.withOpacity(0.2),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                AppStrings.customer,
-                                style: kTextStyle(
-                                  color: AppColors.primaryWhiteColor,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: FontDimen.dimen18,
-                                  height: 1.4,
-                                  letterSpacing: 1.5
-                                ),
-                              ).paddingOnly(left: mQ.width * 0.08),
-                              const Icon(
-                                Icons.arrow_forward_ios,
-                                size: 16,
-                                weight: 0.022,
-                              ).paddingOnly(right: mQ.width * 0.08)
-                            ],
-                          ),
-                        ).paddingOnly(bottom: 20),
+                        kAppPrimaryButton(
+                          onTap: () async {
+                            await StorageHelper.setUserRole(UserRole.customer);
+                            Get.to(WelcomeScreen());
+                          },
+                          text: AppStrings.customer,
+                        ).paddingOnly(top: AppDimens.dimen18),
+                        kAppPrimaryButton(
+                          onTap: () async {
+                            await StorageHelper.setUserRole(UserRole.restaurant);
+                            Get.to(WelcomeScreen());
+                           },
+                          text: AppStrings.restaurants,
+                        ).paddingOnly(top: AppDimens.dimen6),kAppPrimaryButton(
+                          onTap: () async {
+                            await StorageHelper.setUserRole(UserRole.rider);
+                            Get.to(WelcomeScreen());
+                          },
+                          text: AppStrings.rider,
+                        ).paddingOnly(top: AppDimens.dimen6),
                       ],
                     )
                   ],

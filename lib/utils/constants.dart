@@ -29,8 +29,17 @@ class AppFonts {
   static String sfpRoundedSemiBold = "sfpDisplayRoundedSemiBold";
 }
 
+// user Role
+class UserRole {
+  static const String customer = "customer";
+  static const String restaurant = "restaurant";
+  static const String rider = "rider";
+}
 // media query
 Size get mQ => MediaQuery.of(Get.context!).size;
+// get width and height
+double get gH => Get.height;
+double get gW => Get.width;
 // local storage instance
 final GetStorage kStorage = GetStorage();
 // sized box
