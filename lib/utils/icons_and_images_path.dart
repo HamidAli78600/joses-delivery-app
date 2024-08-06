@@ -15,4 +15,6 @@ class AppImages {
   // auth screen image path
   static String loginBackground = "assets/images/auth_elements/login_background.png";
   static String welcomeImage = "assets/images/auth_elements/welcome_image.png";
+  static String phoneNumberImage = "assets/images/auth_elements/phone_number_image.png";
+  static String getOtpImage = "assets/images/auth_elements/enter_otp_image.png";
 }

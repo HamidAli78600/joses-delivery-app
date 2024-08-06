@@ -58,6 +58,15 @@ class AuthController extends GetxController {
     showPassword.value = !showPassword.value;
     update();
   }
-
   // .........................
+
+ // phone number screen
+  TextEditingController phoneNumberController = TextEditingController();
+  final RxString _selectedCode = '+1'.obs;
+  String get selectedCode => _selectedCode.value;
+  void setSelectedPhone(String value) {
+    _selectedCode.value = value;
+  }
+//......................
+
 }

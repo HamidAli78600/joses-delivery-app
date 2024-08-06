@@ -5,7 +5,7 @@ import 'package:joses_delivery_app/utils/constants.dart';
 class KTextField extends StatelessWidget {
   final BuildContext context;
   final String? hintText;
-  final Icon? prefixIcon;
+  final Widget? prefixIcon;
   final IconData? suffixIcon;
   final String? Function(String?)? validator;
   final Function()? suffixOnTap;
@@ -75,4 +75,6 @@ class KTextField extends StatelessWidget {
     );
   }
 }
+
+
 

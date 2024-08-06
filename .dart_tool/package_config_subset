@@ -42,6 +42,10 @@ connectivity_plus_platform_interface
 2.18
 file:///Users/a2z/.pub-cache/hosted/pub.dev/connectivity_plus_platform_interface-2.0.1/
 file:///Users/a2z/.pub-cache/hosted/pub.dev/connectivity_plus_platform_interface-2.0.1/lib/
+country_code_picker
+2.12
+file:///Users/a2z/.pub-cache/hosted/pub.dev/country_code_picker-3.0.0/
+file:///Users/a2z/.pub-cache/hosted/pub.dev/country_code_picker-3.0.0/lib/
 crypto
 2.19
 file:///Users/a2z/.pub-cache/hosted/pub.dev/crypto-3.0.3/
@@ -202,6 +206,10 @@ petitparser
 3.2
 file:///Users/a2z/.pub-cache/hosted/pub.dev/petitparser-6.0.2/
 file:///Users/a2z/.pub-cache/hosted/pub.dev/petitparser-6.0.2/lib/
+pinput
+2.15
+file:///Users/a2z/.pub-cache/hosted/pub.dev/pinput-3.0.1/
+file:///Users/a2z/.pub-cache/hosted/pub.dev/pinput-3.0.1/lib/
 platform
 3.2
 file:///Users/a2z/.pub-cache/hosted/pub.dev/platform-3.1.5/
@@ -250,6 +258,10 @@ sizer
 2.12
 file:///Users/a2z/.pub-cache/hosted/pub.dev/sizer-2.0.15/
 file:///Users/a2z/.pub-cache/hosted/pub.dev/sizer-2.0.15/lib/
+smart_auth
+2.16
+file:///Users/a2z/.pub-cache/hosted/pub.dev/smart_auth-1.1.1/
+file:///Users/a2z/.pub-cache/hosted/pub.dev/smart_auth-1.1.1/lib/
 source_span
 2.18
 file:///Users/a2z/.pub-cache/hosted/pub.dev/source_span-1.10.0/
@@ -298,6 +310,10 @@ universal_io
 2.17
 file:///Users/a2z/.pub-cache/hosted/pub.dev/universal_io-2.2.2/
 file:///Users/a2z/.pub-cache/hosted/pub.dev/universal_io-2.2.2/lib/
+universal_platform
+2.12
+file:///Users/a2z/.pub-cache/hosted/pub.dev/universal_platform-1.1.0/
+file:///Users/a2z/.pub-cache/hosted/pub.dev/universal_platform-1.1.0/lib/
 uuid
 3.0
 file:///Users/a2z/.pub-cache/hosted/pub.dev/uuid-4.4.2/

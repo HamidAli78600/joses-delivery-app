@@ -33,9 +33,17 @@ class AppStrings {
   static String phoneNumber = "Phone Number";
   static String emailAddress = "Email Address";
   static String letsGo = "Let’s Go";
+  // enter phone number screen
+  static String enterPhoneNumber = "ENTER PHONE NUMBER";
+  static String getOtp = "Get OTP";
+  // enter otp screen
+  static String otpVerification = "OTP VERIFICATION";
+  static String enterTheOtp = "Enter the OTP sent to";
 
   //hint
   static String search = 'Search here...';
+  static String selectionRequired = 'Selection Required';
+  static String chooseAnOption = 'Please choose an option first.';
 
   // msg
   static String exitMsg = 'Would you really like to exit?';

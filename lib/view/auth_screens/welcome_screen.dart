@@ -5,8 +5,10 @@ import 'package:joses_delivery_app/utils/app_dimen.dart';
 import 'package:joses_delivery_app/utils/app_strings.dart';
 import 'package:joses_delivery_app/utils/constants.dart';
 import 'package:joses_delivery_app/utils/icons_and_images_path.dart';
+import 'package:joses_delivery_app/view/auth_screens/enter_phone_screen.dart';
 import 'package:joses_delivery_app/widgets/app_buttons/k_primary_button.dart';
 import 'package:joses_delivery_app/widgets/app_buttons/k_secondary_button.dart';
+import 'package:joses_delivery_app/widgets/k_custom_snackbar.dart';
 import 'package:joses_delivery_app/widgets/k_text_field_widget.dart';
 
 
@@ -156,12 +158,17 @@ class WelcomeScreen extends StatelessWidget {
                         ),
                       kSecondaryButton(
                         onTap: () {
-                          if (c.selectedOption.value.isEmpty) {
-                            // Show popup to choose an option first
-                            Get.snackbar("Selection Required", "Please choose an option first.");
-                          } else {
-                            // Proceed with selected option
-                          }
+                         if( c.userRole.value == 'customer') {
+                           if (c.selectedOption.value.isEmpty) {
+                             showCustomSnackBar(AppStrings.selectionRequired, AppStrings.chooseAnOption);
+                           } else {
+                             Get.to(EnterPhoneNumberScreen());
+                           }
+                         } else {
+                           if (formKey.currentState!.validate()) {
+                             // await c.loginWithEmail();
+                           }
+                         }
                         },
                         text: c.userRole.value == 'restaurant' || c.userRole.value == 'rider' ? AppStrings.login : AppStrings.letsGo,
                         height: mQ.height * 0.08,

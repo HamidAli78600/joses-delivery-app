@@ -30,6 +30,7 @@ Widget kSecondaryButton({
             color: textColor ?? AppColors.primaryTextColor,
             fontSize: fontSize ?? FontDimen.dimen18,
             fontWeight: fontWeight ?? FontWeight.w700,
+            letterSpacing: 0.4
           ),
         ),
       ),
