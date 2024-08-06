@@ -1,4 +1,3 @@
-import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:joses_delivery_app/controller/auth_controller.dart';
@@ -6,8 +5,10 @@ import 'package:joses_delivery_app/utils/app_dimen.dart';
 import 'package:joses_delivery_app/utils/app_strings.dart';
 import 'package:joses_delivery_app/utils/constants.dart';
 import 'package:joses_delivery_app/utils/icons_and_images_path.dart';
+import 'package:joses_delivery_app/view/auth_screens/enter_user_name_screen.dart';
 import 'package:joses_delivery_app/widgets/app_buttons/k_secondary_button.dart';
-import 'package:joses_delivery_app/widgets/k_text_field_widget.dart';
+import 'package:joses_delivery_app/widgets/k_pin_code_field.dart';
+import 'package:pinput/pinput.dart';
 
 class GetOtpScreen extends StatelessWidget {
   GetOtpScreen({super.key});
@@ -47,41 +48,19 @@ class GetOtpScreen extends StatelessWidget {
                         letterSpacing: 0.9
                     ),
                   ).paddingOnly(top: mQ.height * 0.02),
-                  // OTP field
-                  KTextField(
-                      controller: c.emailController,
-                      keyboardType: TextInputType.phone,
-                      hintText: AppStrings.phoneNumber,
-                      prefixIcon: CountryCodePicker(
-                        onChanged: (e) => c.setSelectedPhone(e.dialCode!),
-                        initialSelection: 'IN',
-                        showCountryOnly: true,
-                        showDropDownButton: true,
-                        showFlag: true,
-                        showOnlyCountryWhenClosed: true,
-                        favorite: const ['+49','+91','+92'],
-                        builder: (countryCode) {
-                          return Padding(
-                            padding: EdgeInsets.symmetric(horizontal: mQ.width * 0.04,vertical: mQ.height * 0.024),
-                            child: Text(
-                              countryCode.toString(),
-                              style: kTextStyle(color: AppColors.hintColor,letterSpacing: 0.6, fontSize: FontDimen.dimen18),
-                            ),
-                          );
-                        },
-                      ),
-                      obSecureText: false,
-                      context: context,
-                      validator: (value) {
-                        if (value == null || value.isEmpty) {
-                          return 'Please enter your phone number';
-                        }
-                        if (!GetUtils.isPhoneNumber(value)) {
-                          return 'Please enter a valid phone number';
-                        }
-                        return null;
-                      }
-                  ).paddingOnly(top: mQ.height * 0.045),
+                  pinCodeWidget(
+                    pinController: c.otpController, // Optional
+                    focusNode: FocusNode(), // Optional
+                    formKey: GlobalKey<FormState>(), // Optional
+                    length: 4, // Optional
+                    width: mQ.width * 0.4, // Optional
+                    height: mQ.width * 0.18, // Optional
+                    textStyle: kTextStyle(fontSize: FontDimen.dimen24, color: Colors.black), // Optional
+                    borderColor: AppColors.secondaryColor, // Optional
+                    cursorColor: AppColors.secondaryColor, // Optional
+                    submittedColor: AppColors.whiteColor, // Optional
+                    hapticFeedbackType: HapticFeedbackType.mediumImpact, // Optional
+                  ).paddingOnly(top: mQ.height * 0.04),
                   Center(
                     child: RichText(
                       text: TextSpan(
@@ -108,11 +87,12 @@ class GetOtpScreen extends StatelessWidget {
                   ),
                   kSecondaryButton(
                     onTap: () {
-                      // Get.to(GetOtpScreen)
+                      Get.to(EnterUserNameScreen());
                       // if (formKey.currentState!.validate()) {
+                      //   Get.offAll(EnterUserNameScreen());
                       // }
                     },
-                    text: AppStrings.getOtp,
+                    text: AppStrings.verify,
                     height: mQ.height * 0.08,
                     width: mQ.width,
                     buttonColor: AppColors.buttonColor,

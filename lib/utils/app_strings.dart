@@ -39,6 +39,16 @@ class AppStrings {
   // enter otp screen
   static String otpVerification = "OTP VERIFICATION";
   static String enterTheOtp = "Enter the OTP sent to";
+  static String verify = "Verify";
+  // user name screen
+  static String appBarTitle = 'NAME';
+  static String firstName = "First Name";
+  static String lastName = "Last Name";
+
+
+
+
+
 
   //hint
   static String search = 'Search here...';

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:joses_delivery_app/utils/app_dimen.dart';
 import 'package:joses_delivery_app/utils/constants.dart';
 import 'package:pinput/pinput.dart';
 
@@ -14,13 +15,14 @@ Widget pinCodeWidget({
   Color cursorColor = AppColors.secondaryColor,
   Color submittedColor = AppColors.secondaryColor,
   HapticFeedbackType hapticFeedbackType = HapticFeedbackType.lightImpact,
+  String? Function(String?)? validator, // Optional validator parameter
 }) {
   final defaultPinTheme = PinTheme(
     width: width,
     height: height,
-    textStyle: textStyle ?? kTextStyle(fontSize: 22, color: AppColors.secondaryTextColor),
+    textStyle: textStyle ?? kTextStyle(fontSize: FontDimen.dimen22, color: AppColors.secondaryTextColor),
     decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(19),
+      borderRadius: BorderRadius.circular(10),
     ),
   );
 
@@ -36,8 +38,17 @@ Widget pinCodeWidget({
             controller: pinController,
             focusNode: focusNode ?? FocusNode(),
             defaultPinTheme: defaultPinTheme,
-            separatorBuilder: (index) => SizedBox(width: 2),
+            separatorBuilder: (index) => SizedBox(width: mQ.width * 0.06),
             hapticFeedbackType: hapticFeedbackType,
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return 'Please enter the OTP';
+              }
+              if (value.length != 4) {
+                return 'OTP must be 4 digits';
+              }
+              return null;
+            },
             cursor: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -50,27 +61,28 @@ Widget pinCodeWidget({
             ),
             followingPinTheme: defaultPinTheme.copyWith(
               decoration: defaultPinTheme.decoration!.copyWith(
-                borderRadius: BorderRadius.circular(19),
-                border: Border.all(color: borderColor),
+                borderRadius: BorderRadius.circular(12),
+                color: AppColors.whiteColor,
               ),
             ),
             disabledPinTheme: defaultPinTheme.copyWith(
               decoration: defaultPinTheme.decoration!.copyWith(
-                borderRadius: BorderRadius.circular(19),
+                borderRadius: BorderRadius.circular(12),
                 border: Border.all(color: borderColor),
               ),
             ),
             focusedPinTheme: defaultPinTheme.copyWith(
               decoration: defaultPinTheme.decoration!.copyWith(
-                borderRadius: BorderRadius.circular(19),
+                borderRadius: BorderRadius.circular(12),
+                color: AppColors.whiteColor,
                 border: Border.all(color: borderColor),
               ),
             ),
             submittedPinTheme: defaultPinTheme.copyWith(
               decoration: defaultPinTheme.decoration!.copyWith(
                 color: submittedColor,
-                borderRadius: BorderRadius.circular(19),
-                border: Border.all(color: Colors.transparent),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: AppColors.secondaryColor),
               ),
             ),
             errorPinTheme: defaultPinTheme.copyBorderWith(
@@ -82,3 +94,4 @@ Widget pinCodeWidget({
     ),
   );
 }
+
