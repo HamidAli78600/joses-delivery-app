@@ -30,6 +30,9 @@ class AppStrings {
   static String forgetPassword = "Forget Password?";
   static String login = "Login";
   static String continueWith = "Continue with...";
+  static String phoneNumber = "Phone Number";
+  static String emailAddress = "Email Address";
+  static String letsGo = "Let’s Go";
 
   //hint
   static String search = 'Search here...';

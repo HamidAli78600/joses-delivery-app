@@ -17,6 +17,7 @@ class AppColors {
   static const Color whiteColor = Color.fromRGBO(255, 255, 255, 1);
   static const Color hintColor = Color.fromRGBO(0, 0, 0, 0.5);
   static const Color hideIconColor = Color.fromRGBO(46, 58, 89, 0.8);
+  static const Color transparentColor = Colors.transparent;
   static const Color cardColor = Color(0xff2E2E2E);
   static const Color greenColor = Color(0xFF43DC80);
   static const Color redColor = Color(0xFFDC4343);

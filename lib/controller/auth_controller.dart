@@ -36,7 +36,7 @@ class AuthController extends GetxController {
 
   //........................
 
-  // welcome screen for role selection
+  // choose user roole screen for role selection
 
   var userRole = ''.obs; // Reactive RxString
   void updateUserRole(String role) {
@@ -44,6 +44,12 @@ class AuthController extends GetxController {
     printWarning("1 check update of role: ${userRole.value}");
   }
 
+  // .........................
+
+  // welcome screen
+  // if user as a customer role
+  RxString selectedOption = ''.obs;
+  // .................
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
