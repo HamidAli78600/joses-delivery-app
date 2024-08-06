@@ -51,7 +51,7 @@ class ChooseUserTypeScreen extends StatelessWidget {
                       text: TextSpan(
                         text: 'Welcome to \n',
                         style: kTextStyle(
-                            color: AppColors.textColor,
+                            color: AppColors.secondaryTextColor,
                             fontSize: FontDimen.dimen38,
                             fontWeight: FontWeight.w500,
                             letterSpacing: 1.6
@@ -97,22 +97,25 @@ class ChooseUserTypeScreen extends StatelessWidget {
                     Column(
                       children: [
                         kAppPrimaryButton(
-                          onTap: () async {
-                            await StorageHelper.setUserRole(UserRole.customer);
-                            Get.to(WelcomeScreen());
+                          onTap: () {
+                            StorageHelper.setUserRole(UserRole.customer);
+                            printWarning("role is: ${StorageHelper.userRole}");
+                            Get.to(()=>WelcomeScreen());
                           },
                           text: AppStrings.customer,
                         ).paddingOnly(top: AppDimens.dimen18),
                         kAppPrimaryButton(
-                          onTap: () async {
-                            await StorageHelper.setUserRole(UserRole.restaurant);
-                            Get.to(WelcomeScreen());
+                          onTap: () {
+                            StorageHelper.setUserRole(UserRole.restaurant);
+                            printWarning("role is: ${StorageHelper.userRole}");
+                            Get.to(()=>WelcomeScreen());
                            },
                           text: AppStrings.restaurants,
                         ).paddingOnly(top: AppDimens.dimen6),kAppPrimaryButton(
-                          onTap: () async {
-                            await StorageHelper.setUserRole(UserRole.rider);
-                            Get.to(WelcomeScreen());
+                          onTap: () {
+                            StorageHelper.setUserRole(UserRole.rider);
+                            printWarning("role is: ${StorageHelper.userRole}");
+                            Get.to(()=>WelcomeScreen());
                           },
                           text: AppStrings.rider,
                         ).paddingOnly(top: AppDimens.dimen6),

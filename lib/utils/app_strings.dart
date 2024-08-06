@@ -22,6 +22,15 @@ class AppStrings {
   static String restaurants = "Restaurants";
   static String rider = "Rider";
 
+  // Welcome Screen
+  static String welcomeBack = "Welcome back!";
+  static String loginToYourAccount = "Log in to your account";
+  static String email = "Email";
+  static String password = "Password";
+  static String forgetPassword = "Forget Password?";
+  static String login = "Login";
+  static String continueWith = "Continue with...";
+
   //hint
   static String search = 'Search here...';
 

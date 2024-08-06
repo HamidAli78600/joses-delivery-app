@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:joses_delivery_app/controller/auth_controller.dart';
 import 'package:joses_delivery_app/utils/constants.dart';
 
 class StorageHelper {
@@ -22,6 +23,7 @@ class StorageHelper {
   // user role
   static setUserRole(String value) {
     kStorage.write(_userRole, value);
+    Get.find<AuthController>().updateUserRole(value); // Update the AuthController
   }
 
   static _getUserRoleValue() {
@@ -50,6 +52,12 @@ class StorageHelper {
     await kStorage.remove('isLoggedIn');
     await Get.deleteAll(force: true);
   }
+
+  static Future<void> clearRole() async {
+    await kStorage.remove(_userRole);
+    Get.find<AuthController>().updateUserRole('none');
+  }
+
 
   set isLoggedIn(bool value) => kStorage.write("isLoggedIn", value);
   bool get isLoggedIn => kStorage.read('isLoggedIn') ?? false;

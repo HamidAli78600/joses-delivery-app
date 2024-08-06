@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:joses_delivery_app/utils/constants.dart';
 import 'package:joses_delivery_app/utils/icons_and_images_path.dart';
 import 'package:joses_delivery_app/utils/storage_helper.dart';
 import 'package:joses_delivery_app/view/auth_screens/choose_user_type_screen.dart';
@@ -8,6 +9,7 @@ class AuthController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+    userRole.value = StorageHelper.userRole;
     precacheImage(AssetImage(AppImages.onBoardingOneImage), Get.context!);
     precacheImage(AssetImage(AppImages.onBoardingTwoImage), Get.context!);
     precacheImage(AssetImage(AppImages.loginBackground), Get.context!);
@@ -35,8 +37,21 @@ class AuthController extends GetxController {
   //........................
 
   // welcome screen for role selection
-  String userRole = StorageHelper.userRole;
 
+  var userRole = ''.obs; // Reactive RxString
+  void updateUserRole(String role) {
+    userRole.value = role;
+    printWarning("1 check update of role: ${userRole.value}");
+  }
+
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  RxBool showPassword = true.obs;
+  void togglePassword() {
+    showPassword.value = !showPassword.value;
+    update();
+  }
 
   // .........................
 }

@@ -109,7 +109,7 @@ class OnBoardingScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: kTextStyle(
                     fontFamily: AppFonts.sfpRoundedRegular,
-                    color: AppColors.textColor,
+                    color: AppColors.secondaryTextColor,
                     fontSize: FontDimen.dimen32,
                     height: mQ.height * 0.0015,
                     fontWeight: FontWeight.w500),

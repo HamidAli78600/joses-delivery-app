@@ -9,11 +9,14 @@ class AppColors {
   static const Color secondaryColor = Color.fromRGBO(81, 87, 119, 1);
   static const Color primaryWhiteColor = Color.fromRGBO(240, 241, 245, 1);
   static const Color backgroundColor = Color.fromRGBO(63, 61, 86, 1);
-  static const Color textColor = Color.fromRGBO(63, 61, 86, 1);
   static const Color primaryTextColor = Color.fromRGBO(244, 245, 0, 1);
+  static const Color secondaryTextColor = Color.fromRGBO(63, 61, 86, 1);
   static const Color descriptionLightTextColor = Color.fromRGBO(81, 87, 119, 0.6);
+  static const Color buttonColor = Color.fromRGBO(63, 61, 86, 1);
 
-  static const Color hintColor = Color(0xff5E5F62);
+  static const Color whiteColor = Color.fromRGBO(255, 255, 255, 1);
+  static const Color hintColor = Color.fromRGBO(0, 0, 0, 0.5);
+  static const Color hideIconColor = Color.fromRGBO(46, 58, 89, 0.8);
   static const Color cardColor = Color(0xff2E2E2E);
   static const Color greenColor = Color(0xFF43DC80);
   static const Color redColor = Color(0xFFDC4343);
