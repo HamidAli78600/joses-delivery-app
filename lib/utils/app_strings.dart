@@ -44,6 +44,9 @@ class AppStrings {
   static String appBarTitle = 'NAME';
   static String firstName = "First Name";
   static String lastName = "Last Name";
+  static String continueText = "Continue";
+  // profile picture screen
+  static String profilePicture = "Profile Picture";
 
 
 

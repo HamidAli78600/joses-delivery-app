@@ -6,6 +6,7 @@ import 'package:joses_delivery_app/utils/app_strings.dart';
 import 'package:joses_delivery_app/utils/constants.dart';
 import 'package:joses_delivery_app/utils/icons_and_images_path.dart';
 import 'package:joses_delivery_app/view/auth_screens/enter_phone_screen.dart';
+import 'package:joses_delivery_app/view/auth_screens/profile_picture_screen.dart';
 import 'package:joses_delivery_app/widgets/app_buttons/k_primary_button.dart';
 import 'package:joses_delivery_app/widgets/app_buttons/k_secondary_button.dart';
 import 'package:joses_delivery_app/widgets/k_custom_snackbar.dart';
@@ -86,12 +87,12 @@ class EnterUserNameScreen extends StatelessWidget {
                   ).paddingOnly(top: mQ.height * 0.03),
                   kSecondaryButton(
                     onTap: () {
-
+                      Get.to(()=> ProfilePictureScreen());
                       // if (formKey.currentState!.validate()) {
                       //   // await c.loginWithEmail();
                       // }
                     },
-                    text: c.userRole.value == 'restaurant' || c.userRole.value == 'rider' ? AppStrings.login : AppStrings.letsGo,
+                    text: AppStrings.continueText,
                     height: mQ.height * 0.08,
                     width: mQ.width,
                     buttonColor: AppColors.buttonColor,
