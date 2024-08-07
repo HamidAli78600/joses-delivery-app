@@ -1,5 +1,7 @@
 class AppIcons {
-
+  // Auth Screen Icons
+  static String cameraIcon = "assets/icons/cameraIcon.svg";
+  static String profileIcons = "assets/icons/profileIcon.svg";
 }
 
 class AppImages {
