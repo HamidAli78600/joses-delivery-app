@@ -3,7 +3,7 @@ import 'package:joses_delivery_app/utils/app_dimen.dart';
 import 'package:joses_delivery_app/utils/constants.dart';
 
 Widget kSecondaryButton({
-  required VoidCallback onTap,
+  Function()? onTap,
   required String text,
   double? height,
   double? width,

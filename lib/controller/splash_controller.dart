@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:joses_delivery_app/utils/icons_and_images_path.dart';
 import 'package:joses_delivery_app/utils/storage_helper.dart';
 import 'package:joses_delivery_app/view/auth_screens/on_boarding_screen.dart';
-import 'package:joses_delivery_app/view/navbar_screens/nav_bar.dart';
+import 'package:joses_delivery_app/view/customer_view/customer_nav_bar.dart';
 
 class SplashController extends GetxController {
   @override
@@ -15,7 +15,6 @@ class SplashController extends GetxController {
   @override
   void onReady() {
     super.onReady();
-    // Ensure that context is available here
     precacheImage(AssetImage(AppImages.splashLogo), Get.context!);
   }
 
@@ -24,7 +23,15 @@ class SplashController extends GetxController {
       if (StorageHelper.userAccessToken == '') {
         Get.offAll(() => OnBoardingScreen());
       } else {
-        Get.offAll(() => const NavBar());
+        if(StorageHelper.userRole == 'customer'){
+          Get.offAll(() => const CustomerNavBar());
+        }
+        if(StorageHelper.userRole == 'restaurant'){
+
+        }
+        if(StorageHelper.userRole == 'rider'){
+
+        }
       }
     });
   }

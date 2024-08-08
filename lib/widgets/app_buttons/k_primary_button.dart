@@ -15,6 +15,7 @@ Widget kAppPrimaryButton({
   EdgeInsets? padding,
   bool? isIcon,
   Color? borderColor,
+  Color? iconColor,
   double? borderWidth,
 }) {
   return GestureDetector(
@@ -47,6 +48,7 @@ Widget kAppPrimaryButton({
            : Icon(
             icon ?? Icons.arrow_forward_ios,
             size: 16,
+            color:  iconColor ?? AppColors.whiteColor,
           ).paddingOnly(right: padding?.right ?? mQ.width * 0.08)
         ],
       ),

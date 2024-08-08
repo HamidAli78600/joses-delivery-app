@@ -24,6 +24,9 @@ dependencies:
   cached_network_image: ^3.4.0
   country_code_picker: ^3.0.0
   pinput: ^3.0.0
+  image_picker: ^1.0.7
+  image_cropper: ^5.0.1
+  flutter_image_compress: ^2.2.0
 
 
 
@@ -39,6 +42,7 @@ flutter:
   assets:
      - assets/
      - assets/icons/
+     - assets/icons/arrow_icons/
      - assets/images/
      - assets/images/splash_elements/
      - assets/images/on_boarding/

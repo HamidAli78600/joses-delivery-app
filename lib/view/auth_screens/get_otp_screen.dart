@@ -87,7 +87,7 @@ class GetOtpScreen extends StatelessWidget {
                   ),
                   kSecondaryButton(
                     onTap: () {
-                      Get.to(EnterUserNameScreen());
+                      Get.to(()=>EnterUserNameScreen());
                       // if (formKey.currentState!.validate()) {
                       //   Get.offAll(EnterUserNameScreen());
                       // }

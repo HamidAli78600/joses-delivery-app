@@ -15,7 +15,7 @@ import 'package:joses_delivery_app/widgets/k_text_field_widget.dart';
 class WelcomeScreen extends StatelessWidget {
   WelcomeScreen({super.key});
 
-  final AuthController c = Get.find<AuthController>();
+  final AuthController c = Get.put(AuthController());
 
   @override
   Widget build(BuildContext context) {
@@ -143,7 +143,7 @@ class WelcomeScreen extends StatelessWidget {
                           alignment: Alignment.centerRight,
                           child: GestureDetector(
                             onTap: () {
-                              // Get.to(ForgetPasswordScreen());
+                              // Get.to(()=>ForgetPasswordScreen());
                             },
                             child: Text(
                               AppStrings.forgetPassword,
@@ -162,7 +162,7 @@ class WelcomeScreen extends StatelessWidget {
                            if (c.selectedOption.value.isEmpty) {
                              showCustomSnackBar(AppStrings.selectionRequired, AppStrings.chooseAnOption);
                            } else {
-                             Get.to(EnterPhoneNumberScreen());
+                             Get.to(()=>EnterPhoneNumberScreen());
                            }
                          } else {
                            if (formKey.currentState!.validate()) {

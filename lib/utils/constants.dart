@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:sizer/sizer.dart';
+import 'package:joses_delivery_app/utils/app_dimen.dart';
 
 class AppColors {
   static const Color primaryColor = Color.fromRGBO(244, 245, 0, 1);
@@ -18,6 +18,7 @@ class AppColors {
   static const Color hintColor = Color.fromRGBO(0, 0, 0, 0.5);
   static const Color hideIconColor = Color.fromRGBO(46, 58, 89, 0.8);
   static const Color transparentColor = Colors.transparent;
+  static const Color darkGray = Color(0xFF212121);
   static const Color cardColor = Color(0xff2E2E2E);
   static const Color greenColor = Color(0xFF43DC80);
   static const Color redColor = Color(0xFFDC4343);
@@ -48,13 +49,13 @@ double get gW => Get.width;
 final GetStorage kStorage = GetStorage();
 // sized box
 extension CustomSizeBox on int {
-  SizedBox get height => SizedBox(height: toDouble().h);
-  SizedBox get width => SizedBox(width: toDouble().w);
+  SizedBox get height => SizedBox(height: toDouble());
+  SizedBox get width => SizedBox(width: toDouble());
 }
 
 // text styles
-double primaryFontSize = 12.0.sp;
-double secondaryFontSize = 14.0.sp;
+double primaryFontSize = FontDimen.dimen12;
+double secondaryFontSize = FontDimen.dimen14;
 
 //color full print statement
 void printWarning(String text) {

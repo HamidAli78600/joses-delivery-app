@@ -1,7 +1,9 @@
 class AppIcons {
   // Auth Screen Icons
-  static String cameraIcon = "assets/icons/cameraIcon.svg";
-  static String profileIcons = "assets/icons/profileIcon.svg";
+  static String cameraIcon = "assets/icons/camera_icon.svg";
+  static String searchIcon = "assets/icons/search_icon.svg";
+  static String primaryForwardIcon = "assets/icons/primary_forward_arrow_icon.svg";
+  static String whiteForwardIcon = "assets/icons/arrow_icons/white_forward_arrow.svg";
 }
 
 class AppImages {
@@ -19,4 +21,9 @@ class AppImages {
   static String welcomeImage = "assets/images/auth_elements/welcome_image.png";
   static String phoneNumberImage = "assets/images/auth_elements/phone_number_image.png";
   static String getOtpImage = "assets/images/auth_elements/enter_otp_image.png";
+  static String profilePicture = "assets/images/auth_elements/profile_picture.png";
+  // location screen
+  static String locationImage = "assets/images/auth_elements/map_background_image.png";
+
+
 }

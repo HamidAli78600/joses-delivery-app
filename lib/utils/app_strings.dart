@@ -47,7 +47,15 @@ class AppStrings {
   static String continueText = "Continue";
   // profile picture screen
   static String profilePicture = "Profile Picture";
-
+  // Address screen
+  static String address = "ADDRESS";
+  static String searchLocation = "Search location";
+  static String enterCompleteAddress = "ENTER COMPLETE ADDRESS";
+  static String houseNo = "House No. Building Name (Required)*";
+  static String roadName = "Road name, Area, colony*";
+  static String state = "State*";
+  static String city = "City*";
+  static String pinCode = "Pincode*";
 
 
 

@@ -76,7 +76,7 @@ class EnterPhoneNumberScreen extends StatelessWidget {
                   ).paddingOnly(top: mQ.height * 0.045),
                   kSecondaryButton(
                     onTap: () {
-                      Get.to(GetOtpScreen());
+                      Get.to(()=>GetOtpScreen());
                       // if (formKey.currentState!.validate()) {
                       // }
                     },

@@ -5,6 +5,7 @@ import 'package:joses_delivery_app/utils/constants.dart';
 class KTextField extends StatelessWidget {
   final BuildContext context;
   final String? hintText;
+  final TextStyle? hintStyle;
   final Widget? prefixIcon;
   final IconData? suffixIcon;
   final String? Function(String?)? validator;
@@ -12,16 +13,21 @@ class KTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final TextEditingController? controller;
   final bool? obSecureText;
+  final Color? textFieldBgColor;
+  final Color? borderColor;
 
   const KTextField({super.key,
     required this.context,
     this.hintText,
+    this.hintStyle,
     this.prefixIcon,
     this.suffixIcon,
     this.validator,
     this.keyboardType,
     this.controller,
     this.obSecureText,
+    this.textFieldBgColor,
+    this.borderColor,
     this.suffixOnTap});
 
   @override
@@ -51,13 +57,13 @@ class KTextField extends StatelessWidget {
         )
             : null,
         contentPadding: EdgeInsets.symmetric(horizontal: mQ.width * 0.08,vertical: mQ.height * 0.024),
-        hintStyle: kTextStyle(color: AppColors.hintColor,letterSpacing: 0.6, fontSize: FontDimen.dimen18),
+        hintStyle: hintStyle ?? kTextStyle(color: AppColors.hintColor,letterSpacing: 0.6, fontSize: FontDimen.dimen18),
         filled: true,
         isDense: true,
-        fillColor: AppColors.whiteColor,
+        fillColor: textFieldBgColor ?? AppColors.whiteColor,
         enabledBorder:  OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
-          borderSide:  const BorderSide(color:AppColors.whiteColor, width: 1.5),
+          borderSide:  BorderSide(color: borderColor ?? AppColors.whiteColor, width: 1.5),
         ),
         focusedBorder:  OutlineInputBorder(
           borderRadius: BorderRadius.circular(10),
