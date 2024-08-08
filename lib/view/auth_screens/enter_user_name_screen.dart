@@ -4,12 +4,8 @@ import 'package:joses_delivery_app/controller/auth_controller.dart';
 import 'package:joses_delivery_app/utils/app_dimen.dart';
 import 'package:joses_delivery_app/utils/app_strings.dart';
 import 'package:joses_delivery_app/utils/constants.dart';
-import 'package:joses_delivery_app/utils/icons_and_images_path.dart';
-import 'package:joses_delivery_app/view/auth_screens/enter_phone_screen.dart';
 import 'package:joses_delivery_app/view/auth_screens/profile_picture_screen.dart';
-import 'package:joses_delivery_app/widgets/app_buttons/k_primary_button.dart';
 import 'package:joses_delivery_app/widgets/app_buttons/k_secondary_button.dart';
-import 'package:joses_delivery_app/widgets/k_custom_snackbar.dart';
 import 'package:joses_delivery_app/widgets/k_text_field_widget.dart';
 
 
