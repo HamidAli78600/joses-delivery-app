@@ -4,7 +4,9 @@ import 'package:joses_delivery_app/controller/auth_controller.dart';
 import 'package:joses_delivery_app/utils/app_dimen.dart';
 import 'package:joses_delivery_app/utils/app_strings.dart';
 import 'package:joses_delivery_app/utils/constants.dart';
+import 'package:joses_delivery_app/utils/icons_and_images_path.dart';
 import 'package:joses_delivery_app/widgets/app_buttons/k_secondary_button.dart';
+import 'package:joses_delivery_app/widgets/k_svg_icon_widget.dart';
 
 
 class ProfilePictureScreen extends StatelessWidget {
@@ -50,14 +52,18 @@ class ProfilePictureScreen extends StatelessWidget {
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 color: AppColors.whiteColor,
+                // image: DecorationImage(
+                //
+                // ),
               ),
               child: Align(
                 alignment: Alignment.bottomRight,
                 child: CircleAvatar(
                   backgroundColor: AppColors.secondaryColor,
                   radius: 20,
-                  child: Icon(
-                    Icons.image_search_sharp
+                  child: showSvgIcon(
+                    onTap: (){},
+                    iconPath: AppIcons.cameraIcon,
                   ),
                 ),
               ).paddingOnly(right: mQ.width * 0.12),
